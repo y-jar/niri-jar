@@ -334,13 +334,22 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Super+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    // Binds for all the main apps i like to use and or have a shortcut for basic pc useful
+    // TERMINAL
+    Super+Return hotkey-overlay-title="[E]nter a Terminal" { spawn "foot"; }
+    // LAUNCHER
     // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel";}
     Mod+D hotkey-overlay-title="Toggle Noctalia Launcher" { spawn "qs" "ipc" "-c" "noctalia-shell" "call" "launcher" "toggle"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+B { spawn "flatpak" "run" "app.zen_browser.zen"; }
-    Mod+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn "qs" "ipc" "-c" "noctalia-shell" "call" "settings" "toggle"; }
+    // LOCK SCREEN
+    Super+Alt+L hotkey-overlay-title="[L]ock the Screen" { spawn "swaylock"; }
+    // BROWSER
+    Mod+B hotkey-overlay-title="Open [B]rowser" { spawn "flatpak" "run" "app.zen_browser.zen"; }
+    // SETTINGS LAUNCHER
+    Mod+S hotkey-overlay-title="Toggle Noctalia [S]ettings" { spawn "qs" "ipc" "-c" "noctalia-shell" "call" "settings" "toggle"; }
+    // FILE-EXPLORER
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
+    // PH
+    // PH
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -376,6 +385,7 @@ binds {
 
     Mod+Q repeat=false { close-window; }
 
+    // BASIC NAV ARROWS AND VIM MOTIONS
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
@@ -384,7 +394,7 @@ binds {
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
-
+    // +
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
     Mod+Ctrl+Up    { move-window-up; }
